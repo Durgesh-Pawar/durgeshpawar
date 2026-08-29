@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<title>Durgesh Pawar — Projects</title>
+<meta name="description" content="Technical projects, architecture at a glance, and the skills behind them.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar">
+  <nav class="pages" aria-label="Pages">
+    <a href="blog.html" data-ui="blogNav"></a>
+    <a href="index.html" data-ui="resumeNav"></a>
+    <a href="projects.html" aria-current="page" data-ui="projectsNav"></a>
+    <a href="about.html" data-ui="aboutNav"></a>
+  </nav>
+  <div class="bar-toggles">
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <span class="lang-thumb" aria-hidden="true"></span>
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="no" aria-pressed="false">NO</button>
+    </div>
+    <div class="theme-toggle" role="group" aria-label="Theme">
+      <span class="theme-thumb" aria-hidden="true"></span>
+      <button type="button" data-theme-choice="light" aria-pressed="true" title="Light" aria-label="Light theme">☀</button>
+      <button type="button" data-theme-choice="dark" aria-pressed="false" title="Dark" aria-label="Dark theme">☾</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="band band--dark page-hero">
+    <div class="band-inner">
+      <h1 data-ui="projectsNav"></h1>
+      <p class="tagline" data-ui="projectsIntro"></p>
+      <h2 data-ui="skillsCore"></h2>
+      <div class="core-skills" data-bind="skillsCore"></div>
+    </div>
+  </section>
+
+  <section class="band band--paper">
+    <div class="band-inner">
+      <h2 data-ui="projectsNav"></h2>
+      <div class="tech-projects" data-bind="techProjects"></div>
+    </div>
+  </section>
+
+  <section class="band band--alt">
+    <div class="band-inner">
+      <h2 data-ui="skillsPracticed"></h2>
+      <div class="practiced-list" data-bind="skillsPracticed"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="band band--dark band--footer">
+  <div class="band-inner footer-inner">
+    <div class="footer-brand">
+      <p class="footer-name" data-bind="name"></p>
+      <p class="footer-meta">© <span data-bind="year"></span></p>
+    </div>
+    <div class="social-links" data-bind="social"></div>
+  </div>
+</footer>
+
+<script src="assets/content.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
